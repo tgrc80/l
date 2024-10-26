@@ -1,0 +1,12 @@
+name: Keep Codespace Alive
+
+on:
+  schedule:
+    - cron: 0 * * * *
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Codespace
+        run: curl -s https://https://spindly-spooky-mummy-v6q5wwpgrw9qhv9.github.dev/> /dev/null
